@@ -11,8 +11,7 @@ COPY config.xml /opt/hivemq/conf/config.xml
 
 # Install Nginx for reverse proxy
 RUN apt-get update && \
-    apt-get install -y nginx && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y nginx 
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
